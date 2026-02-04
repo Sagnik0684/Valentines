@@ -224,7 +224,7 @@ function setupMusicPlayer() {
     bgMusic.volume = config.music.volume || 0.5;
     bgMusic.load();
     bgMusic.addEventListener('loadedmetadata', () => {
-        bgMusic.currentTime = 48; // start at 48 seconds
+        bgMusic.currentTime = 48.5; // start at specific seconds
     });
 
     // Try autoplay if enabled
