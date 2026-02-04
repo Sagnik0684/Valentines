@@ -223,6 +223,9 @@ function setupMusicPlayer() {
     musicSource.src = config.music.musicUrl;
     bgMusic.volume = config.music.volume || 0.5;
     bgMusic.load();
+    bgMusic.addEventListener('loadedmetadata', () => {
+        bgMusic.currentTime = 48; // start at 48 seconds
+    });
 
     // Try autoplay if enabled
     if (config.music.autoplay) {
